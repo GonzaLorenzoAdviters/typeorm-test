@@ -17,9 +17,8 @@ export class RolesService {
 
   findAll() {
     console.log("a");
-    const num = 1;
-    // return this.roleRepository.find();
-    return num;
+
+    return this.roleRepository.find();
   }
 
   findOne(id: string) {
