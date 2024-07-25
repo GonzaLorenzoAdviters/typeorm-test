@@ -28,14 +28,11 @@ export class User
   @Column('text')
   direccion: string;
 
-  @ManyToOne(() => Car, (car) => car.brand)
-  carBrand: string;
+  @ManyToOne(() => Car, (car) => car.user)
+  car: Car;
 
-  @ManyToOne(() => Car, (car) => car.model)
-  carModel: string;
-
-  @ManyToOne(() => Car, (car) => car.color)
-  carColor: string;
+  @Column('text')
+  patente: string;
 
   @ManyToOne(() => Role, (role) => role.user)
   role: Role;

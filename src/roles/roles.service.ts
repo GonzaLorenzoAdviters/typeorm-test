@@ -11,13 +11,10 @@ export class RolesService {
   private readonly roleRepository: Repository<Role>){}
 
   create(createRoleDto: CreateRoleDto) {
-    console.log(createRoleDto);
     return this.roleRepository.save(createRoleDto);
   }
 
   findAll() {
-    console.log("a");
-
     return this.roleRepository.find();
   }
 
@@ -30,6 +27,6 @@ export class RolesService {
   }
 
   remove(id: string) {
-    return this.roleRepository.softRemove({id: id})
+    return this.roleRepository.softDelete({id: id})
   }
 }
